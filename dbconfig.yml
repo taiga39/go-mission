@@ -1,0 +1,5 @@
+development:
+    dialect: mysql
+    datasource: root:password@tcp(127.0.0.1:5506)/go?parseTime=true&loc=Asia%2FTokyo
+    dir: migrations
+    table: migrations
