@@ -1,15 +1,13 @@
 package server
 
 import (
-	"net/http"
+	"go-mission/pkg/controller"
 
-	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo"
 )
 
 func Start() {
 	e := echo.New()
-	e.POST("/users/create", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	e.POST("/users/create", controller.CreateUser)
 	e.Logger.Fatal(e.Start(":5555"))
 }
